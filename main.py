@@ -36,9 +36,7 @@ def predict(v1,v2,v3,v4,v5,v6,v7):
 # predict
 @app.route('/predict',methods = ['POST', 'GET'])
 def result():
-    area = request.args.get("area")
-    province = request.args.get("province")
-    return predict(area,province),200
+    return "oooooooo",200
 
 
 # recommend
