@@ -36,17 +36,25 @@ def predict(v1,v2,v3,v4,v5,v6,v7):
 # predict
 @app.route('/predict',methods = ['POST', 'GET'])
 def result():
-    return "oooooooo",200
+    area = request.args.get("area")
+    province = request.args.get("province")
+    return predict(area,province),200
 
 
 # recommend
 @app.route('/recommend',methods = ['POST', 'GET'])
 def recommendResult():
-
+    nitrogen = request.args.get("nitrogen")
+    phosphorus = request.args.get("phosphorus")
+    potassium = request.args.get("potassium")
+    temperature = request.args.get("temperature")
+    humidity = request.args.get("humidity")
+    ph = request.args.get("ph")
+    rainfall = request.args.get("rainfall")
     # data = predict(nitrogen,phosphorus, potassium, temperature, humidity, ph, rainfall)
     # print(data)
-    #  return predict(nitrogen,phosphorus, potassium, temperature, humidity, ph, rainfall),200
-    return "data",200
+    return predict(nitrogen,phosphorus, potassium, temperature, humidity, ph, rainfall),200
+    # return data,200
     # return predict(90,48, 40, 28.603016, 85.3, 10.7, 199.91),200
 
 if __name__ =="__main__":
