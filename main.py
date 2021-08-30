@@ -44,13 +44,7 @@ def result():
 # recommend
 @app.route('/recommend',methods = ['POST', 'GET'])
 def recommendResult():
-    nitrogen = request.args.get("nitrogen")
-    phosphorus = request.args.get("phosphorus")
-    potassium = request.args.get("potassium")
-    temperature = request.args.get("temperature")
-    humidity = request.args.get("humidity")
-    ph = request.args.get("ph")
-    rainfall = request.args.get("rainfall")
+
     # data = predict(nitrogen,phosphorus, potassium, temperature, humidity, ph, rainfall)
     # print(data)
     #  return predict(nitrogen,phosphorus, potassium, temperature, humidity, ph, rainfall),200
